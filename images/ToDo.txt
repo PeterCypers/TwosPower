@@ -1,0 +1,2 @@
+"find an image that relates to 2 to the power of x"
+done!

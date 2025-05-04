@@ -1,0 +1,24 @@
+check Web Dev II folder for info on buttons
+
+fix the div contents going outside it's border on solutionsgrid / gridception
+
+job's done!
+
+add a feature where you can insert extra button next to ^20 by clicking a button(with a + icon),
+a flexbox possibly, inserting afterbegin with increments of 1 starting with 21, 22,...
+
+use case: person may want to know how much 2^28 is for instance
+
+also add a reset button to clear all the added buttons except ^20
+
+add: string next to the return button on power of add that shows the number of the button that was pressed
+
+TODO:
+
+in page1(index) add the posibility to type in the value of power X and an extra button
+
+as a small text inputfield ([value X = ][          ]) between brackets
+                           [calc button]
+
+have minimal CSS for the extra calc feature, add it below the blue output window, output
+the data in the blue window too, don't reset the typed x value 

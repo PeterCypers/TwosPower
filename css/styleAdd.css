@@ -1,0 +1,289 @@
+*{
+    box-sizing: border-box;
+}
+/* opmaak buttons */
+.styled{
+    width: 100px;
+    height: 100px;
+    /* color: gold; */
+    /* background-color: rgb(112, 16, 16); */
+
+
+    /*copy pasted */
+    border: 0;
+    /* line-height: 2.5; */
+    padding: 0 6px;
+    /* font-size: 1.5rem; */
+    /* text-align: center; */
+    /* color: #fff; */
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(112, 16, 16, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/* opmaak button container*/
+#buttonKeeper{
+    border: 4mm ridge rgba(83, 85, 50, 0.6);
+    background-color: rgb(223, 132, 132);
+}
+@media screen and (max-width : 570px) {
+    #buttonKeeper{
+        border: unset;
+        border-bottom: 4mm ridge rgba(83, 85, 50, 0.6);
+        border-left: unset;
+        border-top: 4mm ridge rgba(83, 85, 50, 0.6);
+    }
+}
+#buttonKeeper>div{
+    width: 100px;
+    max-width: 100px;
+}
+#nr1,#nr2,#nr3,#nr4,#nr5 {
+    grid-area: a;
+}
+#nr6,#nr7,#nr8,#nr9,#nr10{
+    grid-area: b;
+}
+#nr11,#nr12,#nr13,#nr14,#nr15{
+    grid-area: c;
+}
+#nr1,
+#nr1,
+#nr1,
+#nr1,
+#nr1{
+    grid-area: d;
+}
+@media screen and (min-width : 1080px){
+    
+#buttonKeeper{
+    display: grid;
+    margin: 20px auto;
+    gap: 10px;
+    /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+    grid-template-columns: repeat(auto, 1fr);
+    grid-template-rows: auto 1fr;
+    
+    grid-template-areas: 
+    "a a a a a b b b b b"
+    "c c c c c d d d d d";
+  }
+
+ /* origin point*/
+}
+
+@media screen and (min-width : 800px) and (max-width : 1130px){
+    
+    #buttonKeeper{
+        display: grid;
+        margin: 20px auto;
+        gap: 10px;
+        /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: auto 1fr;
+        
+        grid-template-areas: 
+        "a a a a a a a"
+        "b b b b b b b"
+        "c c c c c c c";
+      }
+    #nr1,
+    #nr2,
+    #nr3,
+    #nr4,
+    #nr5,
+    #nr6,
+    #nr7 {
+    grid-area: a;
+    }
+
+    #nr8,#nr9,#nr10,#nr11,#nr12,#nr13,#nr14{
+    grid-area: b;
+    }
+    #nr15,#nr16,#nr17,#nr18,#nr19,#nr20{
+    grid-area: c;
+    }
+
+}
+
+@media screen and (min-width : 547px) and (max-width : 800px){
+    #buttonKeeper{
+        display: grid;
+        margin: 20px auto;
+        gap: 10px;
+        /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: auto 1fr;
+        
+        grid-template-areas: 
+        "a a a a a"
+        "b b b b b"
+        "c c c c c"
+        "d d d d d";
+      }
+}
+
+@media screen and (max-width : 547px){
+    #buttonKeeper{
+        display: grid;
+        margin: 20px auto;
+        gap: none;
+        /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: auto 1fr;
+        
+        grid-template-areas: 
+        "a a a a a"
+        "b b b b b"
+        "c c c c c"
+        "d d d d d";
+      }
+    
+}
+
+h1{
+    /* display: inline-block; */
+    /* text-decoration: underline overline; */
+    font-size: 3rem;
+    border-bottom: 3.5px solid black;
+    border-top: 3.5px solid black;
+    /* border-radius: 10rem; */
+    padding: 5px;
+    margin: 0px;
+}
+#titleAndExtraButton{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* justify-items: end; */
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#titleAndExtraButton > h1{
+    justify-self: start;
+}
+#titleAndExtraButton > div{
+    justify-self: end;
+    margin-right: 25px;
+} 
+#nr21{
+    scale: 50%;
+    width: 70px;
+    height: 70px;
+    align-self: center;
+}
+/* buttons to calculate and reset */
+#calcContainer{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 50px;
+    margin-bottom: 20px;
+}
+
+#plus,
+#corr,
+#reset,
+#return{
+    font-size: 1.3rem;
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(24, 146, 48);
+    color: rgb(239, 228, 228);
+}
+#plus:hover,
+#corr:hover,
+#reset:hover,
+#return:hover {
+    background-color: rgb(104, 35, 242);
+}
+
+#plus:active,
+#corr:active,
+#reset:active,
+#return:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+/* solutions */
+
+#solutionsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    /* background-color: orange; */
+}
+#gridCeption{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-auto-rows: minmax(50px, auto);
+    background-color: purple;
+
+}
+#gridCeption div{
+    min-width: 75px;
+    background-color: aqua;
+}
+/* visible on the add power, quick fix here making it invis */
+#gridCeption2{
+    /* visibility: hidden;  */
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    background-color: purple;
+
+}
+#solutionsGrid div{
+    font-size: 2rem;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#gridCeption2 div{
+    background-color: aqua;
+}
+/* testing out position */
+/* .bin{
+    color: unset;
+    position: sticky;
+    top: 15px;
+} */
+.inBtn{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows:60px 32px;
+}
+.inBtn p,
+.inBtnSmall p{
+    color: gold;
+    font-size: 1.6rem;
+    justify-self: center;
+    align-self: end;
+    margin: 0px;
+}
+.inBtn .bin,
+.inBtnSmall .bin{
+    font-size: 0.6rem;
+    justify-self: end;
+    align-self: end;
+    color: rgb(168, 135, 135);
+}
+.inBtnSmall{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 40px 18px;
+    /*alignment and justification happens to already be fine */
+}
